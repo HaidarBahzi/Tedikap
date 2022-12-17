@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Cherokee:wght@200&family=Rubik+Vinyl&family=Squada+One&display=swap");
+
+:root {
+  --font-google-squada: "Squada One", cursive;
+  --font-google-rubik: "Rubik Vinyl", cursive;
+  --font-google-cherokee: "Noto Sans Cherokee", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.background-tedikap {
+  background-image: url(Background.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Start Navigation Bar */
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  z-index: 1;
+}
+
+.nav-logo a {
+  font-size: 8vh;
+  font-family: var(--font-google-squada);
+  color: whitesmoke;
+  padding-bottom: 5px;
+  border-bottom: 0.65vh double orange;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vh;
+}
+
+.nav-links li a {
+  font-family: var(--font-google-cherokee);
+  font-size: 2.65vh;
+  color: whitesmoke;
+  position: relative;
+  padding-bottom: 10px;
+  font-weight: 600;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
+}
+
+.nav-links li a::after {
+  content: "";
+  height: 0.5vh;
+  border-radius: 100vmax;
+  width: 100%;
+  background-color: orange;
+  transform-origin: center center;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition: 0.5s ease transform;
+  position: absolute;
+}
+
+.nav-links li a:hover::after {
+  transform-origin: center center;
+  transform: scaleX(100%);
+}
+
+/* Responsive Navigation Bar */
+
+@media (max-width: 800px) {
+  .nav-links {
+    display: none;
+  }
+}
+
+/* End Navigation Bar */
+
+/* Start Home Section */
+
+#Home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 5vh;
+  height: 90vh;
+  width: 100%;
+}
+
+.Home-slogan {
+  font-size: 6.5vh;
+  font-weight: 900;
+  font-family: var(--font-google-rubik);
+  color: antiquewhite;
+}
+
+.Home-btn button {
+  padding: 1.5vh 2.75vh;
+  border: 0.5vh solid orange;
+  background: transparent;
+  color: orange;
+  letter-spacing: 1px;
+  font-size: 3vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  transition: 0.5s ease color;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.Home-btn button:hover {
+  color: white;
+  background-color: orange;
+}
+
+/* Responsive Home Section */
+
+@media (max-width: 800px) {
+  .Home-slogan {
+    font-size: 5vh;
+  }
+}
