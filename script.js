@@ -3,13 +3,13 @@
 
 // Greetings
 
-console.log("0110        1010            101010101010  101010101010  10      0101      0101  ");
-console.log("1010        1010            01        01  01        01  01       0101    0101   ");
-console.log("0110        1010            10        10  01        01  10         0101 0101    ");
-console.log("1010101010101010            01        10  01        01  01            01        ");
-console.log("0110        1010            10        01  01        01  10            01        ");
-console.log("1010        1010            01        10  01        01  01            01        ");
-console.log("0110        1010  10101010  101010101010  01        01  101010101010  01        ");
+console.log("%c 0110        1010            101010101010  101010101010  10      0101      0101  ", "color:red;font-weight: bold;");
+console.log("%c 1010        1010            01        01  01        01  01       0101    0101   ", "color:red;font-weight: bold;");
+console.log("%c 0110        1010            10        10  01        01  10         0101 0101    ", "color:red;font-weight: bold;");
+console.log("%c 1010101010101010            01        10  01        01  01            01        ", "color:red;font-weight: bold;");
+console.log("%c 0110        1010            10        01  01        01  10            01        ", "color:red;font-weight: bold;");
+console.log("%c 1010        1010            01        10  01        01  01            01        ", "color:red;font-weight: bold;");
+console.log("%c 0110        1010  10101010  101010101010  01        01  101010101010  01        ", "color:red;font-weight: bold;");
 
 // Product Logic
 

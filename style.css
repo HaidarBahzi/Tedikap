@@ -28,6 +28,7 @@ a {
   background-color: orange;
   width: 100%;
   min-height: 100vh;
+  padding-top: 10vh;
 }
 
 .background-tedikap {
@@ -192,7 +193,6 @@ nav {
   align-items: center;
   text-align: center;
   flex-direction: column;
-  padding-top: 10vh;
   gap: 5vh;
 }
 
@@ -264,6 +264,10 @@ nav {
   gap: 2.5vh;
   background-color: transparent;
   transition: 0.5s opacity;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .Tea-text h3,
@@ -363,6 +367,8 @@ nav {
 }
 
 .text-box {
+  width: 100%;
+  height: 100%;
   transition: 0.5s ease;
   opacity: 0;
   position: absolute;
@@ -372,6 +378,8 @@ nav {
   -ms-transform: translate(-50%, -50%);
   text-align: center;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 2.5vh;
   background-color: transparent;
@@ -387,6 +395,8 @@ nav {
 .text-box p {
   font-size: 3vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  padding: 5px;
 }
 
 .box-product:hover img {
@@ -421,8 +431,20 @@ nav {
   .Product-Special img,
   .List-Product-Tea img,
   .box-product img {
-    width: 40vh;
+    width: 45vh;
   }
 }
 
 /* End Product Section */
+
+/* Start About Section */
+
+#About {
+}
+
+/* Responsive About Section */
+
+@media (max-width: 800px) {
+}
+
+/* End About Section */
