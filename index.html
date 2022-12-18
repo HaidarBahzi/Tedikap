@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="logo.jpeg" />
+    <link rel="icon" href="logo.webp" />
+    <link rel="preload" as="image" href="Background.webp" />
+    <link rel="preload" as="image" href="logo.webp" />
+    <link rel="preload" as="image" href="Images/Vanilla-Tea.jpg" />
+    <link rel="preload" as="image" href="Images/Special-Series.jpg" />
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
     <title>TEDIKAP Official</title>
@@ -17,10 +21,10 @@
         </div>
 
         <ul class="nav-links">
-          <li><a href="">Home</a></li>
-          <li><a href="">Product</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Location</a></li>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#Product">Product</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Outlet">Outlet</a></li>
         </ul>
       </nav>
 
@@ -36,10 +40,150 @@
     </div>
 
     <main>
-      <section id="Product"></section>
+      <section id="Product">
+        <div class="Product-title">
+          <div class="Product-dec"></div>
+          Our Product
+          <div class="Product-dec"></div>
+        </div>
+
+        <div class="Product-main">
+          <button class="Product-Tea">
+            <img src="Images/Vanilla-Tea.jpg" alt="Tea Series" />
+            <div class="Tea-text">
+              <h3>Tea Series</h3>
+            </div>
+            <div class="Mobile-text">
+              <h3>Tea Series</h3>
+            </div>
+          </button>
+          <button class="Product-Special">
+            <img src="Images/Special-Series.jpg" alt="Yakult Series" />
+            <div class="Special-text">
+              <h3>Special Series</h3>
+            </div>
+            <div class="Mobile-text">
+              <h3>Special Series</h3>
+            </div>
+          </button>
+        </div>
+
+        <div class="List-Product-Tea">
+          <ul>
+            <li>
+              <div class="box-product">
+                <img src="Images/Healty-Tea.jpg" alt="Healty Tea Product" />
+                <div class="text-box">
+                  <h2>Healty Tea</h2>
+                  <p>lorem</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box-product">
+                <img src="Images/Lemonade.jpg" alt="Lemonade Product" />
+                <div class="text-box">
+                  <h2>Lemonade</h2>
+                  <p>lorem</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box-product">
+                <img src="Images/Lychee-Tea.jpg" alt="Lychee Tea Product" />
+                <div class="text-box">
+                  <h2>Lychee Tea</h2>
+                  <p>lorem</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box-product">
+                <img src="Images/Strawberry-Tea.jpg" alt="Strawberry Tea Product" />
+                <div class="text-box">
+                  <h2>Strawberry Tea</h2>
+                  <p>lorem</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box-product">
+                <img src="Images/Telang-Tea.jpg" alt="Telang Tea Product" />
+                <div class="text-box">
+                  <h2>Telang Tea</h2>
+                  <p>lorem</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box-product">
+                <img src="Images/Vanilla-Tea.jpg" alt="Vanilla Tea Product" />
+                <div class="text-box">
+                  <h2>Vanilla Tea</h2>
+                  <p>lorem</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <button class="btn-back-Tea">&larr; Go Back</button>
+        </div>
+
+        <div class="List-Product-Special">
+          <ul>
+            <li>
+              <div class="box-product">
+                <img src="Images/Dark-Chocolate.jpg" alt="" />
+                <div class="text-box">
+                  <h2>Dark Chocolate</h2>
+                  <p>lorem</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box-product">
+                <img src="Images/Matcha.jpg" alt="" />
+                <div class="text-box">
+                  <h2>Matcha</h2>
+                  <p>lorem</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box-product">
+                <img src="Images/yakult-leci.jpg" alt="" />
+                <div class="text-box">
+                  <h2>yakult Lychee</h2>
+                  <p>lorem</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box-product">
+                <img src="Images/Yakult-Orange.jpg" alt="" />
+                <div class="text-box">
+                  <h2>Yakult Orange</h2>
+                  <p>lorem</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="box-product">
+                <img src="Images/yakult-strawberry.jpg" alt="" />
+                <div class="text-box">
+                  <h2>Yakult Strawberry</h2>
+                  <p>lorem</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <button class="btn-back-Special">&larr; Go Back</button>
+        </div>
+      </section>
+
       <section id="About"></section>
-      <section id="Location"></section>
+      <section id="Outlet"></section>
     </main>
+
     <footer></footer>
   </body>
 </html>

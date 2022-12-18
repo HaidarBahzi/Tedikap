@@ -10,6 +10,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-align: center;
 }
 
 li {
@@ -20,12 +22,47 @@ a {
   text-decoration: none;
 }
 
+#Product,
+#About,
+#Outlet {
+  background-color: orange;
+  width: 100%;
+  min-height: 100vh;
+}
+
 .background-tedikap {
-  background-image: url(Background.jpeg);
+  background-image: url(Background.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
+
+/* Start Animation Library */
+
+@keyframes rotate360 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes upandshow {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* End Animation Library */
 
 /* Start Navigation Bar */
 
@@ -42,7 +79,7 @@ nav {
   font-size: 8vh;
   font-family: var(--font-google-squada);
   color: whitesmoke;
-  padding-bottom: 5px;
+  padding-bottom: 1px;
   border-bottom: 0.65vh double orange;
 }
 
@@ -103,13 +140,18 @@ nav {
   gap: 5vh;
   height: 90vh;
   width: 100%;
+  animation: upandshow 2s ease;
 }
 
 .Home-slogan {
   font-size: 6.5vh;
   font-weight: 900;
   font-family: var(--font-google-rubik);
-  color: antiquewhite;
+  background: #ffdd30;
+  background: linear-gradient(to right, #ffdd30 0%, #332409 75%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 .Home-btn button {
@@ -121,9 +163,10 @@ nav {
   font-size: 3vh;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
-  transition: 0.5s ease color;
+  transition: 0.5s all ease;
   cursor: pointer;
   border-radius: 12px;
+  animation: upandshow 4s ease;
 }
 
 .Home-btn button:hover {
@@ -138,3 +181,248 @@ nav {
     font-size: 5vh;
   }
 }
+
+/* End Home Section */
+
+/* Start Product Section */
+
+#Product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding-top: 10vh;
+  gap: 5vh;
+}
+
+.Product-title {
+  font-size: 10vh;
+  letter-spacing: 1px;
+  color: whitesmoke;
+  font-family: var(--font-google-squada);
+  display: inherit;
+  gap: 2.5vh;
+  align-items: center;
+  flex-direction: row;
+}
+
+.Product-dec {
+  border: 2vh double antiquewhite;
+  height: 50px;
+  width: 50px;
+  rotate: 45deg;
+  animation: rotate360 1.5s linear infinite;
+}
+
+.Product-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5vh;
+}
+
+.Product-Tea,
+.Product-Special {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.Product-Tea img,
+.Product-Special img {
+  width: 50vh;
+  height: 60vh;
+  max-width: 100%;
+  opacity: 1;
+  display: flex;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.Tea-text,
+.Special-text {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vh;
+  background-color: transparent;
+  transition: 0.5s opacity;
+}
+
+.Tea-text h3,
+.Special-text h3 {
+  font-size: 5.5vh;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
+
+.Mobile-text h3 {
+  display: none;
+  font-size: 5vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
+
+.Product-Tea:hover img {
+  opacity: 0.6;
+}
+
+.Product-Tea:hover .Tea-text {
+  opacity: 1;
+}
+
+.Product-Special:hover img {
+  opacity: 0.6;
+}
+
+.Product-Special:hover .Special-text {
+  opacity: 1;
+}
+
+.List-Product-Tea,
+.List-Product-Special {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5vh;
+  flex-wrap: wrap;
+}
+
+.List-Product-Tea ul,
+.List-Product-Special ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5vh;
+}
+
+.btn-back-Tea,
+.btn-back-Special {
+  border: 2.5px solid orangered;
+  border-radius: 100vmax;
+  background-color: orangered;
+  color: wheat;
+  transition: 0.5s all;
+  font-size: 3vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  padding: 1.5vh 3.5vh;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-back-Tea:hover,
+.btn-back-Special:hover {
+  background-color: transparent;
+  color: orangered;
+}
+
+.box-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.box-product img {
+  width: 50vh;
+  height: 60vh;
+  max-width: 100%;
+  opacity: 1;
+  display: flex;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.text-box {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vh;
+  background-color: transparent;
+  transition: 0.5s opacity;
+  color: white;
+}
+
+.text-box h2 {
+  font-size: 4.75vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-box p {
+  font-size: 3vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.box-product:hover img {
+  opacity: 0.6;
+}
+
+.box-product:hover .text-box {
+  opacity: 1;
+}
+
+/* Responsive Product Section */
+
+@media (max-width: 800px) {
+  .Product-dec {
+    display: none;
+  }
+
+  .Product-main {
+    flex-direction: column;
+  }
+
+  .Mobile-text h3 {
+    display: flex;
+  }
+
+  .Tea-text,
+  .Special-text {
+    display: none;
+  }
+
+  .Product-Tea img,
+  .Product-Special img,
+  .List-Product-Tea img,
+  .box-product img {
+    width: 40vh;
+  }
+}
+
+/* End Product Section */
