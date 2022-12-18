@@ -11,7 +11,6 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  text-align: center;
 }
 
 li {
@@ -20,6 +19,10 @@ li {
 
 a {
   text-decoration: none;
+}
+
+body {
+  text-align: center;
 }
 
 #Product,
@@ -440,11 +443,224 @@ nav {
 /* Start About Section */
 
 #About {
+  padding: inherit 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  gap: 2.5vh;
+}
+
+.text-about h1 {
+  font-family: var(--font-google-squada);
+  font-size: 10vh;
+}
+
+.text-about h2 {
+  font-size: 6.5vh;
+  font-family: var(--font-google-cherokee);
+}
+
+.text-about p {
+  font-size: 2.75vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.image-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.image-about img {
+  width: 75vh;
+  height: 75vh;
+  max-width: 100%;
+  opacity: 1;
+  display: flex;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+}
+
+.ceo-about {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vh;
+  background-color: transparent;
+  transition: 0.5s opacity;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-about:hover .image-about img {
+  opacity: 0;
+}
+
+.image-about:hover .ceo-about {
+  opacity: 1;
 }
 
 /* Responsive About Section */
 
 @media (max-width: 800px) {
+  #About {
+    flex-direction: column;
+  }
+
+  .image-about img {
+    width: 90%;
+    height: auto;
+  }
+
+  .text-about {
+    text-align: center;
+  }
+
+  .text-about h1 {
+    font-size: 10vh;
+  }
+
+  .text-about {
+    padding: 1vh;
+  }
 }
 
 /* End About Section */
+
+/* Start Footer */
+
+footer {
+  width: 100%;
+  min-height: 30vh;
+  background: linear-gradient(360deg, green, orange);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10vh;
+}
+
+.footer-company {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5vh;
+}
+
+.footer-company h1 {
+  font-family: var(--font-google-squada);
+  font-size: 10vh;
+  color: white;
+}
+
+.footer-company ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5vh;
+}
+
+.footer-company ul li a {
+  font-family: var(--font-google-cherokee);
+  color: white;
+  font-size: 2.5vh;
+}
+
+.footer-info ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+  font-size: 2.75vh;
+  font-family: var(--font-google-cherokee);
+  color: white;
+}
+
+.footer-detail i {
+  border: 2px dotted white;
+  padding: 5px;
+}
+
+.footer-about {
+  width: 30%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.footer-about h1 {
+  font-family: var(--font-google-squada);
+  font-size: 8vh;
+}
+
+.footer-about p {
+  font-family: var(--font-google-cherokee);
+  font-size: 2.5vh;
+}
+
+.footer-about ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5vh;
+}
+
+.footer-about ul li a i {
+  color: white;
+  font-size: 5vh;
+  transition: 0.5s all;
+  border: 2px dotted white;
+  padding: 5px;
+}
+
+.footer-about ul li a i:hover {
+  transform: scale(110%);
+}
+
+/* Responsive Footer */
+
+@media (max-width: 800px) {
+  footer {
+    flex-direction: column;
+    gap: 5vh;
+  }
+
+  .footer-detail {
+    font-size: 2vh;
+  }
+
+  .footer-about {
+    width: 45vh;
+  }
+}
+
+/* End Footer */
