@@ -552,6 +552,62 @@ nav {
 
 /* End About Section */
 
+/* Start Outlet Section */
+
+#Outlet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.Outlet-title {
+  font-size: 10vh;
+  letter-spacing: 1px;
+  color: whitesmoke;
+  font-family: var(--font-google-squada);
+}
+
+#slider {
+  position: relative;
+  width: 100vh;
+  height: 100vh;
+  aspect-ratio: 3/2;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  margin: 0;
+}
+
+/* Responsive Outlet Section */
+
+@media (max-width: 800px) {
+}
+
+/* End Outlet Section */
+
 /* Start Footer */
 
 footer {
