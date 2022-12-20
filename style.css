@@ -574,7 +574,6 @@ nav {
   position: relative;
   width: 100vh;
   height: 100vh;
-  aspect-ratio: 3/2;
   overflow: hidden;
 }
 
@@ -604,6 +603,9 @@ nav {
 /* Responsive Outlet Section */
 
 @media (max-width: 800px) {
+  #slider {
+    width: 95%;
+  }
 }
 
 /* End Outlet Section */
